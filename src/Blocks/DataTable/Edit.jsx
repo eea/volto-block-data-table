@@ -11,9 +11,10 @@ import { getSchema } from './schema';
 import { View } from './View';
 
 const Edit = (props) => {
-  const schema = useMemo(() => getSchema(props.provider_data), [
-    props.provider_data,
-  ]);
+  const schema = useMemo(
+    () => getSchema(props.provider_data),
+    [props.provider_data],
+  );
 
   return (
     <>

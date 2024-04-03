@@ -1,16 +1,16 @@
 .skeleton {
   display: block;
-  background-color: rgba(0, 0, 0, 0.11);
   height: auto;
+  border-radius: 6px;
   margin-top: 0;
   margin-bottom: 0;
-  transform-origin: 0 55%;
-  transform: scale(1, 0.60);
-  border-radius: 6px;
   animation: skeleton-pulse 2s ease-in-out 0.5s infinite;
+  background-color: rgba(0, 0, 0, 0.11);
+  transform: scale(1, 0.6);
+  transform-origin: 0 55%;
 
   &::before {
-    content: "\00a0";
+    content: '\00a0';
   }
 }
 
@@ -22,6 +22,7 @@
   50% {
     opacity: 0.4;
   }
+
   100% {
     opacity: 1;
   }
@@ -54,23 +55,23 @@
 table.data-table {
   &.borderless {
     border: none !important;
-  
+
     tr > th:first-child,
     tr > td:first-child {
       padding-left: 0;
     }
-  
+
     tr > th:last-child,
     tr > td:last-child {
       padding-right: 0;
     }
-  
+
     th,
     td {
       border: none !important;
     }
   }
-  
+
   &.compacted {
     tr td {
       padding-top: 0.3em !important;
