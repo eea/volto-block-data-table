@@ -9,7 +9,7 @@ import './table.less';
 const ColumnHeader = components.columnHeader;
 const CellRenderer = components.cellRenderer;
 
-export default (props) => {
+const TableComponent = (props) => {
   const { rows, columnDefs, defaultColDef, withHeaders, TableProps } = props;
   const { celled, striped, borderless, compacted } = TableProps || {};
 
@@ -51,3 +51,5 @@ export default (props) => {
     </Table>
   );
 };
+
+export default TableComponent;

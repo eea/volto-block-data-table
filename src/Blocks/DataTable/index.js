@@ -4,7 +4,7 @@ import DataTableView from './View';
 
 import DefaultTable from './variations/DefaultTable';
 
-export default (config) => {
+export default function applyConfig(config) {
   config.blocks.blocksConfig.data_table = {
     id: 'data_table',
     title: 'Data Table',
@@ -52,4 +52,4 @@ export default (config) => {
   }
 
   return config;
-};
+}

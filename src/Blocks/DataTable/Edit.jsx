@@ -11,10 +11,9 @@ import { getSchema } from './schema';
 import { View } from './View';
 
 const Edit = (props) => {
-  const schema = useMemo(
-    () => getSchema(props.provider_data),
-    [props.provider_data],
-  );
+  const schema = useMemo(() => getSchema(props.provider_data), [
+    props.provider_data,
+  ]);
 
   return (
     <>
@@ -42,7 +41,11 @@ const EditWrapper = compose(
       !!props.data.itemsPerPage && toNumber(props.data.itemsPerPage) > 0
         ? toNumber(props.data.itemsPerPage)
         : 5;
-    return <WrappedComponent {...props} itemsPerPage={itemsPerPage} />;
+    return (
+      <VisibilitySensor offset={{ top: -150, bottom: -150 }}>
+        <WrappedComponent {...props} itemsPerPage={itemsPerPage} />
+      </VisibilitySensor>
+    );
   },
   connectToProviderData((props) => ({
     provider_url:
@@ -57,10 +60,4 @@ const EditWrapper = compose(
   withBlockExtensions,
 )(Edit);
 
-export default (props) => {
-  return (
-    <VisibilitySensor offset={{ top: -150, bottom: -150 }}>
-      <EditWrapper {...props} />
-    </VisibilitySensor>
-  );
-};
+export default EditWrapper;

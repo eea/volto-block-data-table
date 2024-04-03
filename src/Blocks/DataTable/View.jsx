@@ -78,7 +78,11 @@ const ViewWrapper = compose(
       !!props.data.itemsPerPage && toNumber(props.data.itemsPerPage) > 0
         ? toNumber(props.data.itemsPerPage)
         : 5;
-    return <WrappedComponent {...props} itemsPerPage={itemsPerPage} />;
+    return (
+      <VisibilitySensor offset={{ top: -150, bottom: -150 }}>
+        <WrappedComponent {...props} itemsPerPage={itemsPerPage} />
+      </VisibilitySensor>
+    );
   },
   connectToProviderData((props) => ({
     provider_url: props.data?.provider_url,
@@ -92,10 +96,4 @@ const ViewWrapper = compose(
 
 export { View };
 
-export default (props) => {
-  return (
-    <VisibilitySensor offset={{ top: -150, bottom: -150 }}>
-      <ViewWrapper {...props} />
-    </VisibilitySensor>
-  );
-};
+export default ViewWrapper;
