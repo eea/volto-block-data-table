@@ -7,7 +7,7 @@ pipeline {
   }
 
   environment {
-    GIT_NAME = "volto-addon-template"
+    GIT_NAME = "volto-block-data-table"
     NAMESPACE = "@eeacms"
     SONARQUBE_TAGS = "volto.eea.europa.eu"
     DEPENDENCIES = ""
