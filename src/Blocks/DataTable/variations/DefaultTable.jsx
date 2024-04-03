@@ -3,6 +3,7 @@ import { capitalize } from 'lodash';
 import { Icon } from '@plone/volto/components';
 import { Menu, Loader } from 'semantic-ui-react';
 
+import { defaultColDef } from '@eeacms/volto-block-data-table/config';
 import Table from '@eeacms/volto-block-data-table/Table';
 
 import leftSVG from '@plone/volto/icons/left-key.svg';
@@ -33,6 +34,7 @@ const DefaultView = (props) => {
         rows={rows}
         fields={fields}
         columnDefs={columnDefs}
+        defaultColDef={defaultColDef}
         withHeaders={withHeaders}
         TableProps={TableProps}
       />

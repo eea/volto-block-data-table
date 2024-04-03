@@ -39,7 +39,7 @@ const CellRenderer = (props) => {
   const TableCell = tableCell ? Table.Cell : Fragment;
 
   return (
-    <TableCell>
+    <TableCell style={{ minWidth: colDef.minWidth }}>
       <CellRenderer {...props} value={value} />
     </TableCell>
   );

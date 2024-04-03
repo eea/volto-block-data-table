@@ -38,3 +38,7 @@ export const renderers = {
     skeleton: 'skeletonCellRenderer',
   },
 };
+
+export const defaultColDef = {
+  minWidth: 100,
+};
