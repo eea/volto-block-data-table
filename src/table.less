@@ -1,0 +1,80 @@
+.skeleton {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.11);
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform-origin: 0 55%;
+  transform: scale(1, 0.60);
+  border-radius: 6px;
+  animation: skeleton-pulse 2s ease-in-out 0.5s infinite;
+
+  &::before {
+    content: "\00a0";
+  }
+}
+
+@keyframes skeleton-pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.data-table-block {
+  .ui.menu.pagination {
+    display: flex;
+    justify-content: center;
+
+    .item {
+      &.fitted {
+        min-width: auto;
+        padding: 0 !important;
+
+        .loader {
+          padding: 0 !important;
+        }
+      }
+    }
+
+    .ui.loader {
+      &.disabled {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+table.data-table {
+  &.borderless {
+    border: none !important;
+  
+    tr > th:first-child,
+    tr > td:first-child {
+      padding-left: 0;
+    }
+  
+    tr > th:last-child,
+    tr > td:last-child {
+      padding-right: 0;
+    }
+  
+    th,
+    td {
+      border: none !important;
+    }
+  }
+  
+  &.compacted {
+    tr td {
+      padding-top: 0.3em !important;
+      padding-bottom: 0.3em !important;
+    }
+  }
+}
