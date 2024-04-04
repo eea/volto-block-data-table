@@ -19,7 +19,7 @@
 
 ## Features
 
-![DataConnected Table Block](https://raw.githubusercontent.com/eea/volto-block-data-table/develop/docs/volto-block-data-table.png "DataConnected Table Block")
+![DataConnected Table Block](https://raw.githubusercontent.com/eea/volto-block-data-table/master/docs/volto-block-data-table.png "DataConnected Table Block")
 
 ## Getting started
 
