@@ -15,11 +15,11 @@
 [![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-develop)
 
 
-[Volto](https://github.com/plone/volto) add-on
+[Volto](https://github.com/plone/volto) add-on. The block creates an html table from a given data source. It supports pagination (only with arrows), choose to show/hide headers, max results, different table styles (stripe, compact etc.).
 
 ## Features
 
-Demo GIF
+![DataConnected Table Block](https://raw.githubusercontent.com/eea/volto-block-data-table/master/docs/volto-block-data-table.png "DataConnected Table Block")
 
 ## Getting started
 
