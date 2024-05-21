@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cx from 'classnames';
 import { Table } from 'semantic-ui-react';
-
-import { components } from '@eeacms/volto-block-data-table/config';
+import config from '@plone/volto/registry';
 
 import './table.less';
 
-const ColumnHeader = components.columnHeader;
-const CellRenderer = components.cellRenderer;
-
 const TableComponent = (props) => {
+  const { components } = config.settings.table;
   const { rows, columnDefs, defaultColDef, withHeaders, TableProps } = props;
   const { celled, striped, borderless, compacted } = TableProps || {};
+
+  const [ColumnHeader] = useState(() => components.columnHeader);
+  const [CellRenderer] = useState(() => components.cellRenderer);
 
   return (
     <Table
