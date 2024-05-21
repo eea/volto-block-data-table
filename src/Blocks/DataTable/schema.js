@@ -26,15 +26,15 @@ const getColumnSchema = (fields = []) => ({
     },
     dataType: {
       title: 'Data type',
-      choices: Object.keys(
-        config.settings.table.renderers.dataType,
-      ).map((dataType) => [dataType, capitalize(dataType)]),
+      choices: Object.keys(config.settings.table.renderers.dataType).map(
+        (dataType) => [dataType, capitalize(dataType)],
+      ),
     },
     widget: {
       title: 'Widget',
-      choices: Object.keys(
-        config.settings.table.renderers.widget,
-      ).map((widget) => [widget, capitalize(widget)]),
+      choices: Object.keys(config.settings.table.renderers.widget).map(
+        (widget) => [widget, capitalize(widget)],
+      ),
     },
     template: {
       title: 'Template',
