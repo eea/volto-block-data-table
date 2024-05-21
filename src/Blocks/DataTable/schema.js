@@ -1,6 +1,6 @@
 import { capitalize } from 'lodash';
 
-import { renderers } from '@eeacms/volto-block-data-table/config';
+import config from '@plone/volto/registry';
 
 const getColumnSchema = (fields = []) => ({
   title: 'Column def',
@@ -26,17 +26,15 @@ const getColumnSchema = (fields = []) => ({
     },
     dataType: {
       title: 'Data type',
-      choices: Object.keys(renderers.dataType).map((dataType) => [
-        dataType,
-        capitalize(dataType),
-      ]),
+      choices: Object.keys(config.settings.table.renderers.dataType).map(
+        (dataType) => [dataType, capitalize(dataType)],
+      ),
     },
     widget: {
       title: 'Widget',
-      choices: Object.keys(renderers.widget).map((widget) => [
-        widget,
-        capitalize(widget),
-      ]),
+      choices: Object.keys(config.settings.table.renderers.widget).map(
+        (widget) => [widget, capitalize(widget)],
+      ),
     },
     template: {
       title: 'Template',
