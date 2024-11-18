@@ -9,7 +9,7 @@ pipeline {
   environment {
     GIT_NAME = "volto-block-data-table"
     NAMESPACE = "@eeacms"
-    SONARQUBE_TAGS = "volto.eea.europa.eu,climate-adapt.eea.europa.eu,www.eea.europa.eu-en,demo-www.eea.europa.eu,water.europa.eu-freshwater,land.copernicus.eu,insitu.copernicus.eu,water.europa.eu-marine,climate-advisory-board.europa.eu,biodiversity.europa.eu,forest.eea.europa.eu"
+    SONARQUBE_TAGS = "volto.eea.europa.eu,climate-adapt.eea.europa.eu,www.eea.europa.eu-en,demo-www.eea.europa.eu,water.europa.eu-freshwater,land.copernicus.eu,insitu.copernicus.eu,water.europa.eu-marine,climate-advisory-board.europa.eu,biodiversity.europa.eu,forest.eea.europa.eu,industry.eea.europa.eu"
     DEPENDENCIES = ""
     BACKEND_PROFILES = "eea.kitkat:testing"
     BACKEND_ADDONS = ""
