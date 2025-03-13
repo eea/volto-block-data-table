@@ -40,16 +40,17 @@ const View = (props) => {
 
     // Create an empty array to store the transformed objects
     let transformedArray = [];
-
-    // Iterate over the values and construct new objects
-    for (let i = 0; i < rawRows[keys[0]].length; i++) {
-      let row = {
-        id: rawRows.id?.[i] || i + 1,
-      };
-      keys.forEach((key) => {
-        row[key] = rawRows[key][i];
-      });
-      transformedArray.push(row);
+    if (keys.length) {
+      // Iterate over the values and construct new objects
+      for (let i = 0; i < rawRows[keys[0]]?.length; i++) {
+        let row = {
+          id: rawRows.id?.[i] || i + 1,
+        };
+        keys.forEach((key) => {
+          row[key] = rawRows[key][i];
+        });
+        transformedArray.push(row);
+      }
     }
 
     return transformedArray;
