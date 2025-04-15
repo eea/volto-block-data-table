@@ -1,9 +1,8 @@
 import React, { useMemo } from 'react';
 import { compose } from 'redux';
 import { toNumber } from 'lodash';
-import { SidebarPortal } from '@plone/volto/components';
+import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
 import { withBlockExtensions } from '@plone/volto/helpers';
-import InlineForm from '@plone/volto/components/manage/Form/InlineForm';
 import { VisibilitySensor } from '@eeacms/volto-datablocks/components';
 import { connectToProviderData } from '@eeacms/volto-datablocks/hocs';
 
@@ -20,9 +19,11 @@ const Edit = (props) => {
     <>
       <View {...props} mode="edit" />
       <SidebarPortal selected={props.selected}>
-        <InlineForm
+        <BlockDataForm
+          block={props.block}
           schema={schema}
           title={schema.title}
+          onChangeBlock={props.onChangeBlock}
           onChangeField={(id, value) => {
             props.onChangeBlock(props.block, {
               ...props.data,
