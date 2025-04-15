@@ -58,7 +58,13 @@ export const getSchema = (provider_data) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['provider_url', 'placeholder', 'itemsPerPage', 'variation', 'columnDefs'],
+        fields: [
+          'provider_url',
+          'placeholder',
+          'itemsPerPage',
+          'variation',
+          'columnDefs',
+        ],
       },
       {
         id: 'settings',
@@ -159,9 +165,9 @@ export const getSchema = (provider_data) => {
         title: 'Variation',
         type: 'string',
         factory: 'Choice',
-        choices:
-          config.blocks.blocksConfig.data_table.variations.map(variation => [variation.id, variation.title])
-        ,
+        choices: config.blocks.blocksConfig.data_table.variations.map(
+          (variation) => [variation.id, variation.title],
+        ),
       },
     },
 
