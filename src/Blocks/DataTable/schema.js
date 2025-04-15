@@ -58,7 +58,7 @@ export const getSchema = (provider_data) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['provider_url', 'placeholder', 'itemsPerPage', 'columnDefs'],
+        fields: ['provider_url', 'placeholder', 'itemsPerPage', 'variation', 'columnDefs'],
       },
       {
         id: 'settings',
@@ -154,6 +154,14 @@ export const getSchema = (provider_data) => {
       compacted: {
         title: 'Make the table compact',
         type: 'boolean',
+      },
+      variation: {
+        title: 'Variation',
+        type: 'string',
+        factory: 'Choice',
+        choices:
+          config.blocks.blocksConfig.data_table.variations.map(variation => [variation.id, variation.title])
+        ,
       },
     },
 
