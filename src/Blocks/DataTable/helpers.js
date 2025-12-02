@@ -1,4 +1,3 @@
-import React from 'react';
 import { isArray } from 'lodash';
 import { FormattedValue } from '@eeacms/volto-datablocks/Utils';
 

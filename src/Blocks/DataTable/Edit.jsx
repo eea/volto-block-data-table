@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { compose } from 'redux';
 import { toNumber } from 'lodash';
 import { SidebarPortal, BlockDataForm } from '@plone/volto/components';

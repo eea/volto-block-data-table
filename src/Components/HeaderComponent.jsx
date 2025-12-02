@@ -1,11 +1,12 @@
 import { capitalize } from 'lodash';
 import { Table } from 'semantic-ui-react';
 
-const HeaderComponent = ({ colDef }) => {
+const HeaderComponent = ({ className, colDef, as }) => {
+  const Component = as || Table.HeaderCell;
   return (
-    <Table.HeaderCell>
+    <Component className={className} style={{ minWidth: colDef.minWidth }}>
       {colDef.headerName || capitalize(colDef.field)}
-    </Table.HeaderCell>
+    </Component>
   );
 };
 

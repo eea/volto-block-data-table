@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { compose } from 'redux';
 import { toNumber, range } from 'lodash';
 import { withBlockExtensions } from '@plone/volto/helpers';

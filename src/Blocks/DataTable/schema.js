@@ -66,6 +66,7 @@ export const getSchema = (provider_data) => {
         fields: [
           'withPagination',
           'withHeaders',
+          'transposed',
           'celled',
           'striped',
           'borderless',
@@ -153,6 +154,11 @@ export const getSchema = (provider_data) => {
       },
       compacted: {
         title: 'Make the table compact',
+        type: 'boolean',
+      },
+      transposed: {
+        title: 'Transpose table',
+        description: 'Swap rows and columns',
         type: 'boolean',
       },
     },

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { capitalize } from 'lodash';
 import { Icon } from '@plone/volto/components';
 import config from '@plone/volto/registry';
@@ -18,7 +18,7 @@ const DefaultView = (props) => {
     loadingProviderData,
     TableProps,
   } = props;
-  const { withHeaders, withPagination } = props.data;
+  const { withHeaders, withPagination, transposed } = props.data;
 
   const columnDefs = useMemo(() => {
     if (!!props.data.columnDefs?.length) return props.data.columnDefs;
@@ -36,6 +36,7 @@ const DefaultView = (props) => {
         columnDefs={columnDefs}
         defaultColDef={config.settings.table.defaultColDef}
         withHeaders={withHeaders}
+        transposed={transposed}
         TableProps={TableProps}
       />
       {withPagination && (
