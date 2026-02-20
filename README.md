@@ -3,16 +3,16 @@
 [![Releases](https://img.shields.io/github/v/release/eea/volto-block-data-table)](https://github.com/eea/volto-block-data-table/releases)
 
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-block-data-table%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-block-data-table/job/master/display/redirect)
-[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-master&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-master)
-[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-master&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-master)
-[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-master&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-master)
-[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-master&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-master)
+[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table)
+[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table)
+[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table)
+[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table)
 
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-block-data-table%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-block-data-table/job/develop/display/redirect)
-[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-develop&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-develop)
-[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-develop&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-develop)
-[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-develop&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-develop)
-[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table-develop)
+[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&branch=develop&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table&branch=develop)
+[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&branch=develop&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table&branch=develop)
+[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&branch=develop&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table&branch=develop)
+[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-block-data-table&branch=develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-block-data-table&branch=develop)
 
 
 [Volto](https://github.com/plone/volto) add-on. The block creates an html table from a given data source. It supports pagination (only with arrows), choose to show/hide headers, max results, different table styles (stripe, compact etc.).
