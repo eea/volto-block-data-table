@@ -1,11 +1,14 @@
-import { isNumber, isNaN, isString, isNull } from 'lodash';
+import isNumber from 'lodash/isNumber';
+import isNaN from 'lodash/isNaN';
+import isString from 'lodash/isString';
+import isNull from 'lodash/isNull';
 
 export function parseNumber(number) {
   const parsedNumber = isString(number)
     ? parseFloat(number)
     : isNumber(number)
-    ? number
-    : null;
+      ? number
+      : null;
   return isNull(parsedNumber) || isNaN(parsedNumber) ? null : parsedNumber;
 }
 

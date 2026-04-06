@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import { compose } from 'redux';
-import { toNumber, range } from 'lodash';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import toNumber from 'lodash/toNumber';
+import range from 'lodash/range';
+import { withBlockExtensions } from '@plone/volto/helpers//Extensions';
 import { VisibilitySensor } from '@eeacms/volto-datablocks/components';
 import { connectToProviderData } from '@eeacms/volto-datablocks/hocs';
 
@@ -21,8 +22,8 @@ const View = (props) => {
       (pagination.data[pagination.activePage]
         ? pagination.data[pagination.activePage]
         : pagination.activePage !== pagination.prevPage
-        ? pagination.data[pagination.prevPage]
-        : null) || provider_data
+          ? pagination.data[pagination.prevPage]
+          : null) || provider_data
     );
   }, [pagination, provider_data]);
 

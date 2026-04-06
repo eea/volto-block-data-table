@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import { capitalize } from 'lodash';
-import { Icon } from '@plone/volto/components';
+import capitalize from 'lodash/capitalize';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
 import config from '@plone/volto/registry';
 import { Menu, Loader } from 'semantic-ui-react';
 

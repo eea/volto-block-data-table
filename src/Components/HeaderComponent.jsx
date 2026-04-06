@@ -1,4 +1,4 @@
-import { capitalize } from 'lodash';
+import capitalize from 'lodash/capitalize';
 import { Table } from 'semantic-ui-react';
 
 const HeaderComponent = ({ className, colDef, as }) => {

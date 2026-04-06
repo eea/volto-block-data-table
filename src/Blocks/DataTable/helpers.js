@@ -1,4 +1,4 @@
-import { isArray } from 'lodash';
+import isArray from 'lodash/isArray';
 import { FormattedValue } from '@eeacms/volto-datablocks/Utils';
 
 export const getValue = (tableData, column, rowIndex, textTemplate) => {
