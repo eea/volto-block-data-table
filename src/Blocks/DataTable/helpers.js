@@ -1,4 +1,5 @@
-import { isArray } from 'lodash';
+import React from 'react';
+import isArray from 'lodash/isArray';
 import { FormattedValue } from '@eeacms/volto-datablocks/Utils';
 
 export const getValue = (tableData, column, rowIndex, textTemplate) => {
@@ -24,15 +25,13 @@ export const getCellValue = (tableData, colDef, rowIndex, placeholder = '') => {
       : tableData[colDef.column]?.[rowIndex];
   }
 
-  return typeof colDef === 'string' ? (
-    <span>{value || placeholder}</span>
-  ) : (
-    <FormattedValue
-      textTemplate={colDef.textTemplate}
-      value={value || placeholder}
-      specifier={colDef.specifier}
-    />
-  );
+  return typeof colDef === 'string'
+    ? React.createElement('span', null, value || placeholder)
+    : React.createElement(FormattedValue, {
+        textTemplate: colDef.textTemplate,
+        value: value || placeholder,
+        specifier: colDef.specifier,
+      });
 };
 
 export const isValidUrl = (url) => {

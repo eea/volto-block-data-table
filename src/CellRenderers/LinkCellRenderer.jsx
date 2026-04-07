@@ -1,4 +1,4 @@
-import { UniversalLink } from '@plone/volto/components';
+import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import { applyTemplate } from '@eeacms/volto-block-data-table/utils';
 
 import CellRenderer from './CellRenderer';
