@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
 import { compose } from 'redux';
-import { toNumber } from 'lodash';
-import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import toNumber from 'lodash/toNumber';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
+import { withBlockExtensions } from '@plone/volto/helpers//Extensions';
 import { VisibilitySensor } from '@eeacms/volto-datablocks/components';
 import { connectToProviderData } from '@eeacms/volto-datablocks/hocs';
 
