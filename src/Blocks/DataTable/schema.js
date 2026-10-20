@@ -64,6 +64,7 @@ export const getSchema = (provider_data) => {
         id: 'settings',
         title: 'Settings',
         fields: [
+          'pivotColumn',
           'withPagination',
           'withHeaders',
           'transposed',
@@ -129,6 +130,12 @@ export const getSchema = (provider_data) => {
         title: 'Placeholder',
         widget: 'textarea',
         default: 'No results',
+      },
+      pivotColumn: {
+        title: 'Pivot column',
+        description:
+          'Create one tab per distinct value of this column. Leave empty to disable pivoting.',
+        choices: fields.map((field) => [field, capitalize(field)]),
       },
       withPagination: {
         title: 'Toggle pagination',

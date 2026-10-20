@@ -1,10 +1,11 @@
 import { useMemo } from 'react';
 import { compose } from 'redux';
-import toNumber from 'lodash/toNumber';
 import range from 'lodash/range';
 import { withBlockExtensions } from '@plone/volto/helpers//Extensions';
 import { VisibilitySensor } from '@eeacms/volto-datablocks/components';
 import { connectToProviderData } from '@eeacms/volto-datablocks/hocs';
+
+import { getFetchItemsPerPage, getItemsPerPage } from './helpers';
 
 const View = (props) => {
   const {
@@ -76,21 +77,25 @@ const View = (props) => {
 
 const ViewWrapper = compose(
   (WrappedComponent) => (props) => {
-    const itemsPerPage =
-      !!props.data.itemsPerPage && toNumber(props.data.itemsPerPage) > 0
-        ? toNumber(props.data.itemsPerPage)
-        : 5;
+    const itemsPerPage = getItemsPerPage(props.data);
+    const fetchItemsPerPage = getFetchItemsPerPage(props.data);
     return (
       <VisibilitySensor offset={{ top: -150, bottom: -150 }}>
-        <WrappedComponent {...props} itemsPerPage={itemsPerPage} />
+        <WrappedComponent
+          {...props}
+          itemsPerPage={itemsPerPage}
+          fetchItemsPerPage={fetchItemsPerPage}
+        />
       </VisibilitySensor>
     );
   },
   connectToProviderData((props) => ({
     provider_url: props.data?.provider_url,
     pagination: {
-      enabled: props.data.withPagination,
-      itemsPerPage: props.itemsPerPage,
+      // Pivoting needs the whole dataset in a single request, so pagination
+      // must stay enabled at the provider level even if the pager is hidden.
+      enabled: !!props.data?.pivotColumn || props.data?.withPagination,
+      itemsPerPage: props.fetchItemsPerPage,
     },
   })),
   withBlockExtensions,
