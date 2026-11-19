@@ -1,0 +1,109 @@
+[
+ {
+  "RuleID": "env-short-secret-assignment",
+  "Description": "Uppercase env-style PASS/TOKEN/SECRET assignment",
+  "StartLine": 36,
+  "EndLine": 36,
+  "StartColumn": 11,
+  "EndColumn": 49,
+  "Match": "GITHUB_TOKEN=REDACTED",
+  "Secret": "REDACTED",
+  "Attributes": {
+   "git.author_email": "miu.razvan28@gmail.com",
+   "git.author_name": "Miu Razvan",
+   "git.date": "2024-03-27T11:15:31Z",
+   "git.message": "Initial commit",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/eea/volto-block-data-table",
+   "git.sha": "25dfaa778b3870895e4896611cdfa6bee6235a7d",
+   "path": "RELEASE.md",
+   "resource": "git.patch_content",
+   "url": "https://github.com/eea/volto-block-data-table/blob/25dfaa778b3870895e4896611cdfa6bee6235a7d/RELEASE.md?plain=1#L36"
+  },
+  "Tags": [
+   "env",
+   "literal-secret",
+   "env",
+   "literal-secret"
+  ],
+  "Fingerprint": "25dfaa778b3870895e4896611cdfa6bee6235a7d:RELEASE.md:env-short-secret-assignment:36",
+  "File": "RELEASE.md",
+  "SymlinkFile": "",
+  "Commit": "25dfaa778b3870895e4896611cdfa6bee6235a7d",
+  "Entropy": 0.23519339,
+  "Author": "Miu Razvan",
+  "Email": "miu.razvan28@gmail.com",
+  "Date": "2024-03-27T11:15:31Z",
+  "Message": "Initial commit"
+ },
+ {
+  "RuleID": "secret-literal-assignment",
+  "Description": "Secret-like literal assignment in source, YAML, env and config files",
+  "StartLine": 11,
+  "EndLine": 11,
+  "StartColumn": 3,
+  "EndColumn": 20,
+  "Match": "password = 'REDACTED'",
+  "Secret": "REDACTED",
+  "Attributes": {
+   "git.author_email": "miu.razvan28@gmail.com",
+   "git.author_name": "Miu Razvan",
+   "git.date": "2024-03-27T11:15:31Z",
+   "git.message": "Initial commit",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/eea/volto-block-data-table",
+   "git.sha": "25dfaa778b3870895e4896611cdfa6bee6235a7d",
+   "path": "cypress/support/commands.js",
+   "resource": "git.patch_content",
+   "url": "https://github.com/eea/volto-block-data-table/blob/25dfaa778b3870895e4896611cdfa6bee6235a7d/cypress/support/commands.js#L11"
+  },
+  "Tags": [
+   "literal-secret",
+   "literal-secret"
+  ],
+  "Fingerprint": "25dfaa778b3870895e4896611cdfa6bee6235a7d:cypress/support/commands.js:secret-literal-assignment:11",
+  "File": "cypress/support/commands.js",
+  "SymlinkFile": "",
+  "Commit": "25dfaa778b3870895e4896611cdfa6bee6235a7d",
+  "Entropy": 2.321928,
+  "Author": "Miu Razvan",
+  "Email": "miu.razvan28@gmail.com",
+  "Date": "2024-03-27T11:15:31Z",
+  "Message": "Initial commit"
+ },
+ {
+  "RuleID": "secret-literal-assignment",
+  "Description": "Secret-like literal assignment in source, YAML, env and config files",
+  "StartLine": 18,
+  "EndLine": 18,
+  "StartColumn": 28,
+  "EndColumn": 46,
+  "Match": "password: REDACTED",
+  "Secret": "REDACTED",
+  "Attributes": {
+   "git.author_email": "miu.razvan28@gmail.com",
+   "git.author_name": "Miu Razvan",
+   "git.date": "2024-03-27T11:15:31Z",
+   "git.message": "Initial commit",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/eea/volto-block-data-table",
+   "git.sha": "25dfaa778b3870895e4896611cdfa6bee6235a7d",
+   "path": "cypress/support/commands.js",
+   "resource": "git.patch_content",
+   "url": "https://github.com/eea/volto-block-data-table/blob/25dfaa778b3870895e4896611cdfa6bee6235a7d/cypress/support/commands.js#L18"
+  },
+  "Tags": [
+   "literal-secret",
+   "literal-secret"
+  ],
+  "Fingerprint": "25dfaa778b3870895e4896611cdfa6bee6235a7d:cypress/support/commands.js:secret-literal-assignment:18",
+  "File": "cypress/support/commands.js",
+  "SymlinkFile": "",
+  "Commit": "25dfaa778b3870895e4896611cdfa6bee6235a7d",
+  "Entropy": 2.947703,
+  "Author": "Miu Razvan",
+  "Email": "miu.razvan28@gmail.com",
+  "Date": "2024-03-27T11:15:31Z",
+  "Message": "Initial commit"
+ }
+]
