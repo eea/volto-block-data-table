@@ -10,6 +10,19 @@
 
 ![DataConnected Table Block](https://raw.githubusercontent.com/eea/volto-block-data-table/master/docs/volto-block-data-table.png "DataConnected Table Block")
 
+## Upgrade
+
+### Upgrading to 3.x
+
+> This version requires `Volto 18` or `Volto 19` and Node.js 22.
+
+The block keeps the same API, so upgrading from 2.x on Volto 18 needs no code changes. The release adds Volto 19 support and moves the repository to the Volto 19 layout, where the published package lives in `packages/volto-block-data-table`.
+
+#### Breaking changes
+
+- **Node.js 22 or newer is required** (`engines.node >= 22`), 2.x declared no engine.
+- **React and React DOM are now declared peer dependencies** (`^18.2.0`), 2.x declared no `peerDependencies`.
+
 ## Requirements
 
 ### Backend
